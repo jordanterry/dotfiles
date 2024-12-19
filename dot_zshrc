@@ -1,0 +1,5 @@
+# Export ANDROID_HOME variable
+export ANDROID_HOME=$HOME/Library/Android/sdk/
+
+# Export binary locations
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
