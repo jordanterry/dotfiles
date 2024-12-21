@@ -2,6 +2,18 @@ packages:
   darwin:
     brews:
       - 'git'
+      - 'gh'
     casks:
-      - 'proxyman'
+      - 'android-platform-tools'
+      - 'android-studio'
+      - 'fleet'
+      - 'ia-presenter'
+      - 'iterm2'
+      - 'gitkraken'
+      - 'intellij-idea'
       - 'jetbrains-toolbox'
+      - 'notion'
+      - 'proxyman'
+      - 'rustrover'
+      - 'slack'
+      - 'writerside'
