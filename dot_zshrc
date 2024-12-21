@@ -5,3 +5,5 @@ export ANDROID_HOME=$HOME/Library/Android/sdk/
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 export EDITOR="fleet --wait"
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
