@@ -1,3 +1,6 @@
+# Export zsh home
+export ZSH="$HOME/.oh-my-zsh"
+
 # Export ANDROID_HOME variable
 export ANDROID_HOME=$HOME/Library/Android/sdk/
 
@@ -9,4 +12,9 @@ export PATH="/opt/homebrew/bin/:$PATH"
 
 export EDITOR="fleet --wait"
 
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 source "$HOME/.sdkman/bin/sdkman-init.sh"

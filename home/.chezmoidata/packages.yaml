@@ -3,6 +3,7 @@ packages:
     brews:
       - 'git'
       - 'gh'
+      - 'ruby'
     casks:
       - 'android-platform-tools'
       - 'android-studio'
