@@ -1,0 +1,11 @@
+# Export binary locations
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
+
+# Extend PATH with brew path
+export PATH="/opt/homebrew/bin/:$PATH"
+
+# Prefer ruby installed from Homebrew
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+# Use fleet and await closing of window
+export EDITOR="fleet --wait"
