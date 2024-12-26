@@ -4,6 +4,7 @@ packages:
       - 'git'
       - 'gh'
       - 'ruby'
+      - 'starship'
     casks:
       - 'android-platform-tools'
       - 'android-studio'
