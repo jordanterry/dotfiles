@@ -1,13 +1,15 @@
 packages:
   darwin:
     taps:
-      - 'anthropic/tap'
+      - 'jordanterry/grph https://github.com/jordanterry/grph'
     brews:
+      - 'antigen'
       - 'git'
       - 'gh'
+      - 'grph-cli'
       - 'ruby'
-      - 'starship'
-      - 'claude'
+    pips:
+      - 'mortgage-cli'
     casks:
       - 'android-platform-tools'
       - 'android-studio'

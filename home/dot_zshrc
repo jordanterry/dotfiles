@@ -1,13 +1,10 @@
-# Export zsh home
-export ZSH="$HOME/.oh-my-zsh"
 
-# Export ANDROID_HOME variable
-export ANDROID_HOME=$HOME/Library/Android/sdk/
+source $(brew --prefix)/share/antigen/antigen.zsh
 
-ZSH_THEME="robbyrussell"
+antigen use oh-my-zsh
 
-plugins=(git)
+antigen bundle git
 
-source $ZSH/oh-my-zsh.sh
+antigen apply
+
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-eval "$(starship init zsh)"

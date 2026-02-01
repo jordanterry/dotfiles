@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install pip packages
+# packages.yaml hash: {{ .packages.darwin.pips | toString | sha256sum }}
+
+{{ range .packages.darwin.pips -}}
+pip3 install {{ . | quote }}
+{{ end -}}
+{{ end -}}

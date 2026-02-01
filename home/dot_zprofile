@@ -4,8 +4,9 @@ export PATH="$HOME/bin:/usr/local/bin:$PATH"
 # Extend PATH with brew path
 export PATH="/opt/homebrew/bin/:$PATH"
 
-# Prefer ruby installed from Homebrew
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
 # Use fleet and await closing of window
-export EDITOR="fleet --wait"
+export EDITOR="subl --wait"
