@@ -1,0 +1,18 @@
+
+source $(brew --prefix)/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen theme robbyrussell
+
+antigen bundle git
+{{ if eq .chezmoi.os "darwin" -}}
+antigen bundle $HOME/.zsh/plugins/brew-daily-update
+{{ end -}}
+
+antigen apply
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Apply chezmoi changes (runs in background to avoid blocking shell startup)
+(chezmoi apply &>/dev/null &)

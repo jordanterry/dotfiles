@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "darwin" -}}
+# brew-daily-update plugin
+# Updates Homebrew packages once per day in the background
+
+_brew_daily_update() {
+  local stamp_file="$HOME/.brew_update_stamp"
+  local today=$(date +%Y-%m-%d)
+
+  if [[ ! -f "$stamp_file" ]] || [[ $(cat "$stamp_file") != "$today" ]]; then
+    echo "$today" > "$stamp_file"
+    (brew update && brew upgrade &>/dev/null &)
+  fi
+}
+
+_brew_daily_update
+{{ end -}}

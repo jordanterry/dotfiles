@@ -8,9 +8,8 @@ packages:
       - 'gh'
       - 'grph-cli'
       - 'ruby'
-    pips:
-      - 'mortgage-cli'
     casks:
+      - 'claude-code'
       - 'android-platform-tools'
       - 'android-studio'
       - 'intellij-idea'

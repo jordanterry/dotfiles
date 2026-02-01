@@ -4,7 +4,7 @@
 brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.taps -}}
 {{ if contains " " . -}}
-{{ $parts := split " " . -}}
+{{ $parts := splitList " " . -}}
 tap {{ index $parts 0 | quote }}, {{ index $parts 1 | quote }}
 {{ else -}}
 tap {{ . | quote }}

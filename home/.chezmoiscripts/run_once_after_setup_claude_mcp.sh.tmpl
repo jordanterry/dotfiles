@@ -1,0 +1,39 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Claude Code MCP Server Setup
+# Configures MCP servers for Claude Code
+
+set -e
+
+CLAUDE_DIR="$HOME/.claude"
+MCP_CONFIG="$CLAUDE_DIR/mcp_servers.json"
+
+echo "Setting up Claude Code MCP servers..."
+
+# Check if Proxyman MCP server exists
+PROXYMAN_MCP="/Applications/Proxyman.app/Contents/MacOS/mcp-server"
+
+if [ -f "$PROXYMAN_MCP" ]; then
+    echo "Proxyman MCP server found, configuring..."
+
+    # Create or update MCP config
+    cat > "$MCP_CONFIG" << 'EOF'
+{
+  "mcpServers": {
+    "proxyman": {
+      "command": "/Applications/Proxyman.app/Contents/MacOS/mcp-server",
+      "args": [],
+      "env": {}
+    }
+  }
+}
+EOF
+    echo "MCP configuration written to $MCP_CONFIG"
+else
+    echo "Proxyman MCP server not found at $PROXYMAN_MCP"
+    echo "Update Proxyman to enable MCP support (requires PRO license)"
+fi
+
+echo "Claude Code MCP setup complete"
+{{ end -}}
