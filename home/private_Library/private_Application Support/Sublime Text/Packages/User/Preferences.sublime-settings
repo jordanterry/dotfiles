@@ -1,0 +1,13 @@
+{
+    "color_scheme": "Packages/Catppuccin/build/Catppuccin Mocha.sublime-color-scheme",
+    "font_face": "JetBrainsMono Nerd Font",
+    "font_size": 14,
+    "line_padding_top": 2,
+    "line_padding_bottom": 2,
+    "caret_extra_width": 2,
+    "highlight_line": true,
+    "draw_white_space": "selection",
+    "scroll_past_end": true,
+    "show_encoding": true,
+    "show_line_endings": true
+}

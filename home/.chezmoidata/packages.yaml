@@ -17,6 +17,7 @@ packages:
       - 'android-studio'
       - 'intellij-idea'
       - 'jetbrains-toolbox'
+      - 'phpstorm'
       - 'proxyman'
       - 'slack'
       - 'sublime-text'

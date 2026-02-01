@@ -1,0 +1,36 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install Catppuccin theme for JetBrains IDEs
+# Plugin ID: 18682 (Catppuccin Theme from JetBrains Marketplace)
+
+PLUGIN_ID="18682"
+
+install_plugin() {
+    local app_path="$1"
+    local app_name="$2"
+    local binary="$3"
+
+    if [ -d "$app_path" ]; then
+        echo "Installing Catppuccin for $app_name..."
+        "$app_path/Contents/MacOS/$binary" installPlugins "$PLUGIN_ID" 2>/dev/null &
+        sleep 5
+        echo "Plugin installation triggered for $app_name"
+    fi
+}
+
+echo "Installing Catppuccin theme for JetBrains IDEs..."
+
+# IntelliJ IDEA
+install_plugin "/Applications/IntelliJ IDEA.app" "IntelliJ IDEA" "idea"
+
+# Android Studio
+install_plugin "/Applications/Android Studio.app" "Android Studio" "studio"
+
+# PhpStorm
+install_plugin "/Applications/PhpStorm.app" "PhpStorm" "phpstorm"
+
+echo ""
+echo "Catppuccin theme installation complete."
+echo "To enable: Open IDE > Settings > Appearance > Theme > Catppuccin Mocha"
+{{ end -}}

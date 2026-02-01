@@ -1,0 +1,16 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install Catppuccin theme for Sublime Text
+PACKAGES_DIR="$HOME/Library/Application Support/Sublime Text/Packages"
+CATPPUCCIN_DIR="$PACKAGES_DIR/Catppuccin"
+
+if [ ! -d "$CATPPUCCIN_DIR" ]; then
+    echo "Installing Catppuccin theme for Sublime Text..."
+    mkdir -p "$PACKAGES_DIR"
+    git clone https://github.com/catppuccin/sublime-text.git "$CATPPUCCIN_DIR"
+    echo "Catppuccin theme installed."
+else
+    echo "Catppuccin theme already installed."
+fi
+{{ end -}}
