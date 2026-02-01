@@ -1,11 +1,12 @@
 
+# Zsh options
+setopt AUTO_CD          # Type directory name to cd into it
+
 source $(brew --prefix)/share/antigen/antigen.zsh
 
-antigen use oh-my-zsh
-
-antigen theme robbyrussell
-
-antigen bundle git
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
 {{ if eq .chezmoi.os "darwin" -}}
 antigen bundle $HOME/.zsh/plugins/brew-daily-update
 {{ end -}}
@@ -16,3 +17,6 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Apply chezmoi changes (runs in background to avoid blocking shell startup)
 (chezmoi apply &>/dev/null &)
+
+# Starship prompt
+eval "$(starship init zsh)"

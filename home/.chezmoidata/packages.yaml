@@ -8,8 +8,11 @@ packages:
       - 'gh'
       - 'grph-cli'
       - 'ruby'
+      - 'starship'
     casks:
       - 'claude-code'
+      - 'font-jetbrains-mono-nerd-font'
+      - 'ghostty'
       - 'android-platform-tools'
       - 'android-studio'
       - 'intellij-idea'

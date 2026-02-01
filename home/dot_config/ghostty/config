@@ -1,0 +1,13 @@
+# Ghostty configuration
+# https://ghostty.org/docs/config
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# Theme (optional - Ghostty has nice defaults)
+# theme = "GruvboxDark"
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
