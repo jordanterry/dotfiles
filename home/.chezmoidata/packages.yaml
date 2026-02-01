@@ -1,10 +1,13 @@
 packages:
   darwin:
+    taps:
+      - 'anthropic/tap'
     brews:
       - 'git'
       - 'gh'
       - 'ruby'
       - 'starship'
+      - 'claude'
     casks:
       - 'android-platform-tools'
       - 'android-studio'

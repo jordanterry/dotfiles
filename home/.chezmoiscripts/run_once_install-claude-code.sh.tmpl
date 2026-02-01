@@ -1,0 +1,21 @@
+{{ if ne .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Install Claude Code via npm on non-Darwin platforms
+# On Darwin, Claude Code is installed via Homebrew in the packages script
+
+if ! command -v node &> /dev/null; then
+    echo "Node.js is not installed. Please install Node.js first."
+    exit 1
+fi
+
+if ! command -v npx &> /dev/null; then
+    echo "npx is not available. Please install npm first."
+    exit 1
+fi
+
+# Install Claude Code globally via npm
+npm install -g @anthropic-ai/claude-code
+
+echo "Claude Code installed successfully"
+{{ end -}}
