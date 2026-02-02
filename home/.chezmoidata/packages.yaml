@@ -1,5 +1,6 @@
 packages:
-  darwin:
+  # CLI tools - installed on all platforms with Homebrew
+  common:
     taps:
       - 'jordanterry/grph https://github.com/jordanterry/grph'
     brews:
@@ -9,6 +10,8 @@ packages:
       - 'grph-cli'
       - 'ruby'
       - 'starship'
+  # GUI apps - macOS only (casks)
+  darwin:
     casks:
       - 'claude-code'
       - 'font-jetbrains-mono-nerd-font'
